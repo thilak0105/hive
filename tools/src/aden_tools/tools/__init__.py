@@ -127,6 +127,7 @@ from .supabase_tool import register_tools as register_supabase
 from .tech_stack_detector import register_tools as register_tech_stack_detector
 from .telegram_tool import register_tools as register_telegram
 from .terraform_tool import register_tools as register_terraform
+from .text_chunking_tool import register_tools as register_text_chunking
 from .time_tool import register_tools as register_time
 from .tines_tool import register_tools as register_tines
 from .trello_tool import register_tools as register_trello
@@ -327,6 +328,7 @@ def _register_unverified(
     register_trello(mcp, credentials=credentials)
     register_twilio(mcp, credentials=credentials)
     register_twitter(mcp, credentials=credentials)
+    register_text_chunking(mcp)
     register_vercel(mcp, credentials=credentials)
     register_youtube(mcp, credentials=credentials)
     register_zendesk(mcp, credentials=credentials)

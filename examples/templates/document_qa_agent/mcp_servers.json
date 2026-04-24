@@ -1,0 +1,12 @@
+{
+  "hive_tools": {
+    "transport": "stdio",
+    "command": "uv",
+    "args": ["run", "python", "mcp_server.py", "--stdio"],
+    "cwd": "../../../tools",
+    "env": {
+      "INCLUDE_UNVERIFIED_TOOLS": "true"
+    },
+    "description": "Aden tools MCP server providing document extraction, chunking, embeddings, Pinecone, and web scraping tools"
+  }
+}

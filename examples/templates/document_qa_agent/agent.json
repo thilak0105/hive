@@ -1,0 +1,34 @@
+{
+  "agent": {
+    "id": "document_qa_agent",
+    "name": "Document Q&A Agent",
+    "version": "1.0.0",
+    "description": "Retrieve, chunk, embed, and answer questions over documents using the Hive tool stack."
+  },
+  "graph": {
+    "id": "document-qa-graph",
+    "goal_id": "document-qa",
+    "version": "1.0.0",
+    "entry_node": "intake",
+    "entry_points": {
+      "start": "intake"
+    },
+    "pause_nodes": [],
+    "terminal_nodes": ["synthesize"],
+    "nodes": [],
+    "edges": []
+  },
+  "required_tools": [
+    "pdf_read",
+    "web_scrape",
+    "text_chunk_text",
+    "huggingface_run_embedding",
+    "pinecone_create_index",
+    "pinecone_upsert_vectors",
+    "pinecone_query_vectors"
+  ],
+  "metadata": {
+    "node_count": 4,
+    "edge_count": 3
+  }
+}
